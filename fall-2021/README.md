@@ -6,4 +6,4 @@
 5. Discrete Mathematics
 6. Principles of UI Desing
 
-Total Hour: 27  
+Total Hour Per Week: 27  
