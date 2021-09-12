@@ -7,3 +7,8 @@
 6. Principles of UI Design
 
 Total Hour Per Week: 27  
+
+## Goals
+- Learn Vue.js
+- Solve 1000 competitive problem
+- Write 15 article
