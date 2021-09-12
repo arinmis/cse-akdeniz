@@ -4,6 +4,6 @@
 3. Digital Design
 4. Basics of Electronic Circuits
 5. Discrete Mathematics
-6. Principles of UI Desing
+6. Principles of UI Design
 
 Total Hour Per Week: 27  
