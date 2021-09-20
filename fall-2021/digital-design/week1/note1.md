@@ -12,7 +12,7 @@ Types of system:
 
 Example:  
     - Odometer
-        * input: count up, reset
-        * output: visiul display
-        * state: stored 'value'
+        - input: count up, reset
+        - output: visiul display
+        - state: stored 'value'
 
