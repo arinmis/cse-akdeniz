@@ -10,7 +10,7 @@ Types of system:
     - Synchronous sequential
     - Asynchronous sequential
 
-####### Example:  
+###### Example:  
 - Odometer  
     - input: count up, reset
     - output: visiul display
