@@ -1,7 +1,7 @@
 ## Digital System
 
 
-discrete input -> process -> discrete output
+discrete input -> process -> discrete output  
 Note: process depeds on system state
 
 Types of system:
