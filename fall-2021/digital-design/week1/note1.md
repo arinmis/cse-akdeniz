@@ -4,13 +4,13 @@
 discrete input -> process -> discrete output  
 Note: process depeds on system state
 
-Types of system:
+Types of system:  
 1.With no state
 1.With state
     - Synchronous sequential
     - Asynchronous sequential
 
-Example:
+Example:  
     - Odometer
         input: count up, reset
         output: visiul display
