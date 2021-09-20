@@ -6,7 +6,7 @@ Note: process depeds on system state
 
 Types of system:  
 1.With no state
-1.With state
+2.With state
     - Synchronous sequential
     - Asynchronous sequential
 
