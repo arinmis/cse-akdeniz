@@ -11,8 +11,8 @@ Types of system:
     - Asynchronous sequential
 
 Example:  
-    - Odometer  
-        - input: count up, reset
-        - output: visiul display
-        - state: stored 'value'
+- Odometer  
+    - input: count up, reset
+    - output: visiul display
+    - state: stored 'value'
 
