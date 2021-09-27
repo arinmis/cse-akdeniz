@@ -9,7 +9,7 @@
 Total Hour Per Week: 27  
 
 ## Goals
-- Learn Vue.js
-- Solve 1000 cp problem
-- Write 15 article
-- Upload 15 cp problem solution to YouTube
+- Learn Vue.js:                            
+- Solve 1000 cp problem: 259 / 1000
+- Write 15 article: 0 / 15
+- Upload 15 cp problem solution to YouTube: 0 / 15
