@@ -1,5 +1,5 @@
 1. Functions, Graphs, and Modeling
-2. Prlude to Calculus
+2. Prelude to Calculus
 3. The Derivative 
 4. Applications of Derivative
 5. The Integral
