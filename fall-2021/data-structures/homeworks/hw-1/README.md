@@ -2,8 +2,8 @@
 This Experiment is about measuring string concatenation time in various languages.   
 #### Algorithm of n Times concatenation
   temp := "" 
-  i := 1
-  while n >= i 
+    i := 1
+    while n >= i 
     temp := temp + "c"
     i = i + 1
 
