@@ -15,3 +15,8 @@ In each language concatenation will be performed n = 1e3, n = 1e4, , n = 1e5, n 
 2. C++
 3. Java
 4. C#
+
+#### Graph of Experiment
+<p align="center">
+  <img src="https://github.com/Arinmis/cse-akdeniz/blob/main/fall-2021/data-structures/homeworks/hw-1/graph.png">
+</p>
