@@ -17,3 +17,6 @@ In each language concatenation will be performed n = 1e3, n = 1e4, , n = 1e5, n 
 4. C#
 
 #### Graph 
+<p align="center">
+  <img src="https://github.com/Arinmis/cse-akdeniz/blob/main/fall-2021/data-structures/experiments/ex-1/docs/graph.py" alt="graph">
+</p>

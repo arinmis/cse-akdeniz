@@ -15,6 +15,7 @@ plt.title('String Concatenation')
 plt.xlabel('Number of Input')
 plt.ylabel('Concatenation Time in Millisecond')
 plt.legend()
+plt.margins(x=2, y=0)
 plt.show()
 
 
