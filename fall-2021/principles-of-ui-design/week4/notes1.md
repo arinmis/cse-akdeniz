@@ -2,8 +2,10 @@
 ### Task Analysis
 - What are the goal?
 - Preconditions 
-- Subtask
-**Example**
+- Subtask  
+- Questions about task
+	 * Where, how often...
+#### Example
 - Goal
 	* Send message 
 - Preconditions
@@ -13,7 +15,5 @@
 	* Idetify recipient
 	* Write message text 
 	* Send it	
-- Questions about task
-	 * Where, how often...
 
 
