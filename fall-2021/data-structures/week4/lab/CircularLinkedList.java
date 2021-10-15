@@ -1,3 +1,8 @@
+/* 
+ * Implementation of circulary linked list 
+ * @author Mustafa Arinmis
+ * @since 15.10.2021
+**/
 
 class CircularLinkedList<T> {
 
@@ -35,8 +40,8 @@ class CircularLinkedList<T> {
     }
 
     // head 
-    Node<T> head;  
-    Node<T> tail;
+    private Node<T> head;  
+    private Node<T> tail;
     int size; 
     public CircularLinkedList() {
         this.head = null;
@@ -68,6 +73,33 @@ class CircularLinkedList<T> {
         node.setValue(value);
     }
 
+    // delete the given index
+    public T delete(int index) {
+        Node<T> preNode = get(index - 1);
+        Node<T> deleted = preNode.getNext();
+        if (index == 0) // when head deleted
+            this.head = preNode.getNext().getNext(); 
+        // perform deletion
+        preNode.setNext(preNode.getNext().getNext());
+        this.size--; // decrease the size
+        return deleted.getValue();
+    }
+
+
+    public void addFirst(T value) {
+        Node<T> newNode = new Node<>(value);
+        this.addBetween(this.get(size - 1), head, newNode);
+        this.head = newNode;
+        size++;
+    }
+    
+    public void addLast(T value) {
+        Node<T> newNode = new Node<>(value);
+        Node<T> preTail = this.get(size - 1);
+        this.addBetween(preTail, preTail.getNext(), newNode);
+        size++;
+    }
+
     // 0 1 2 3
     public Node<T> get(int index) {
         // find correct index
@@ -81,8 +113,12 @@ class CircularLinkedList<T> {
             temp = temp.getNext();
         } 
         return temp;
-    };
+    }
 
+    // getter for head 
+    public Node<T> getHead() {
+        return this.head;
+    }
 
     // helper method
     private void addBetween(Node<T> firstNode, Node<T> lastNode, Node<T> newNode) {
@@ -101,6 +137,15 @@ class CircularLinkedList<T> {
             temp = temp.getNext();
         } 
         return result.toString();
+    }
+
+    public static void main(String[] args) {
+        CircularLinkedList<Integer> cl = new CircularLinkedList<>();
+        for (int i = 0; i < 5; i++)
+            cl.insert(i, i + 1);
+        cl.addLast(99);
+        cl.addLast(100);
+        System.out.println(cl);
     }
 
 }
