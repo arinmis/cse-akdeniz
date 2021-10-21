@@ -12,9 +12,9 @@ public class CircularlyArray {
    // 1 2 _ _ _
     if (i < 0 || i > array.length || i > size)
       throw new ArrayIndexOutOfBoundsException(i); 
-    // rotate elements to right 
+    // shift elements to right 
     if (i < size)
-      rotateRight(i);
+      shiftRight(i);
     this.array[i] = element;
     size++;
   }
@@ -30,10 +30,14 @@ public class CircularlyArray {
     if (i < 0 || i > array.length || i > size)
       throw new ArrayIndexOutOfBoundsException(i); 
     i = this.realIndex(i);
+    int deleted = this.array[i]; 
+    shiftLeft(i);
     size--;
-    return this.array[i];
+    return deleted;
   }
 
+  // 1 2 3 4 
+  // 2 3 4 
   // get element i 
   public int get(int i) {
     i = this.realIndex(i); 
@@ -57,50 +61,38 @@ public class CircularlyArray {
   private int realIndex(int i) {
     // prevent arithmetic exception
     if (i == 0)
-      return 1;
+      return 0;
     return i % this.size;
   }
 
-  public void rotateRight(int index) {
-    // no rotation needed
-    if (index == size - 1) {
-      this.array[index + 1] = array[index]; 
-      return;
-    }
-    int temp = this.array[index];
-    for (int i = index; i < size; i++) {
-      int prev = this.array[ i];  
-      this.array[i] = temp; 
-      temp = prev;
-    }
-    
+  /* shift left side  one step starting starting from given index */
+  public void shiftLeft(int index) {
+    for (int i = index; i < this.size - 1; i++) 
+      this.array[i] = this.array[i + 1];
   }
 
-  public void rotateLeft(int index) {
-    // no rotation needed
-    if (index == size - 1) {
-      this.array[index + 1] = array[index]; 
-      return;
-    }
-    int temp = this.array[index];
-    for (int i = index; i < size; i++) {
-      int prev = this.array[ i];  
-      this.array[i] = temp; 
-      temp = prev;
-    }
-    
+  /* shift right side  one step starting starting from given index */
+  public void shiftRight(int index) {
+    for (int i = this.array.length - 1; i > index; i--) 
+      this.array[i] = this.array[i - 1];
   }
 
   public static void main(String[] args) {
     CircularlyArray numbers = new CircularlyArray(10); 
-    numbers.insert(0, 5);
-    numbers.insert(1, 6);
-    numbers.insert(1, 7);
-    numbers.insert(3, 8);
-    numbers.insert(4, 9);
+    for (int i = 0; i < 5; i++) {
+        numbers.insert(i, i + 1);
+    }
+    System.out.println(numbers);
+    numbers.delete(4);
     System.out.println(numbers);
   }
 
-
-
 }
+
+
+
+
+
+
+
+
