@@ -18,18 +18,22 @@ public class SolveEquation {
         Scanner input = new Scanner(System.in);
         System.out.print("enter equation: " );
         String equation = input.nextLine().replaceAll(" ","");
+        // update cli before computation
+        System.out.print("Solution: ");
         String charSet = getCharSet(equation);
         String digits = "0123456789"; 
         ArrayList<String> squenceList = new ArrayList<>(); // put all solutions here
         solvePuzzle(charSet.length(), "", digits, charSet, equation, squenceList);
-        // solve with first founded squence
-        String solution = getSolution(squenceList.get(0), charSet, equation);
         // when no solution 
         if (squenceList.size() == 0) {
             System.out.println("No solution has been founded: " + equation);
         }
-        else
-            System.out.println("Solution: " + solution);
+        else {
+            // solve with first founded squence
+            String solution = getSolution(squenceList.get(0), charSet, equation);
+            System.out.println(solution);
+            System.out.println("Also there are " + (squenceList.size()  - 1) + " other solution exist");
+        }
     }
 
     // k for desired length of the sequence 
