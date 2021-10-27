@@ -21,16 +21,15 @@
 **Example:** F = X'YZ + XYZ' + XZ can be reduced to F = X'Y + XZ 
 
 #### Boolean Algebra Laws
-| Identity      | AND Form | OR Form |
+| Identity  Name  | AND Form | OR Form |
 | -----------   | ----------- | -----------|
 | Identity L.   | 1x = x      | 0 + x = x  |
 | Null L.       | 0x = 0      | 1 + x = 1  |	
-| Idempotent    | xx = x      | x + x = 1  |		
+| Idempotent L.  | xx = x      | x + x = 1  |		
 | Inverse L.    | xx'= 0	    | x + x' = 1 |		
 | Commutative L.| xy = yx	    | x + y = y + x |		
 | Associative L.| xy(z) = x(yz)	    | (x + y) + z = x + (y + z) |		
 | Distributive  | x + yz = (x + y) (x + z)| x (y + z) = xy + xz |		
-
 | Absorption L.   | x (x + y) = x    | x + xy = x |
 | DeMorgan's Law   | (xy)' = x' + y' |  (x + y)' = x'.y'|
 | Double Complement L.| (x)'' = x |  (x)'' = x |
