@@ -33,3 +33,9 @@
 | Absorption L.   | x (x + y) = x    | x + xy = x |
 | DeMorgan's Law   | (xy)' = x' + y' |  (x + y)' = x'.y'|
 | Double Complement L.| (x)'' = x |  (x)'' = x |
+
+#### Principle of Duality
+- To get dual of boolean function:
+	* Interchange OR and And operations 
+	* Interchange 1s and 0s operations 
+**Example:** x(y + z) --dual correspondence--> x + yz
