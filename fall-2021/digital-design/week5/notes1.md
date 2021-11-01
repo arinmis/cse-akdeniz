@@ -12,7 +12,7 @@
 	* At least one Boolean Varible
 	* At least one Boolean operator 
 	* At least one input from the set {0, 1} 
-- Boolean outputs always will be in the {0, 1}
+- Boolean outputs always will be in the {0, 1}  
 **Example:** F(x, y z) = x.z' + y
 - Priority of operations: NOT, AND, OR
 
