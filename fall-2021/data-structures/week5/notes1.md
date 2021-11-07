@@ -7,7 +7,7 @@
 ### Binary Search 
 
 ### Exam Hints
-**Note:** Write an method thats sums given two matrix recursively
-**Note:** Write an method thats reverse matrix diagonally 
+**Note:** Write an method thats sums given two matrix recursively  
+**Note:** Write an method thats reverse matrix diagonally   
 **Note:** Does it tail recursion or not 
 
