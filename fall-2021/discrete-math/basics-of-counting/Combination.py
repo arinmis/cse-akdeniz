@@ -10,7 +10,7 @@ def chooseAll(k, combination, digits, selecteds):
         if k == 1:
             selecteds.add(frozenset(combination))
         else: 
-            permute(k - 1, combination, digits[:i] + digits[i + 1:], selecteds)
+            chooseAll(k - 1, combination, digits[:i] + digits[i + 1:], selecteds)
         combination.remove(digits[i])
 
 
