@@ -7,7 +7,7 @@ public class ArrayOperations {
     int[] numbers = new int[size];
     for (int i = 0; i < size; i++)
       numbers[i] = i + 1;
-    shiftLeft(numbers, 0);
+    shiftLeft(numbers, 1);
     System.out.println(Arrays.toString(numbers));
   }
 
