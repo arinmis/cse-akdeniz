@@ -5,7 +5,8 @@ public class StackExpression {
     final static String END = "$";
 
     public static void main(String[] args) {
-        String expression = "1 * 2 + 3" ;
+        // should be 162
+        String expression = "1 + 2 * 3 ^ 4" ;
         // result without predence: 9  
         // result with predence:    7  
         int result = evaluate(expression);
@@ -39,7 +40,9 @@ public class StackExpression {
         if (op.equals("-")) {
             return num1 - num2;
         }
-        return num1 * num2;
+        if (op.equals("*"))
+            return num1 * num2;
+        return (int)Math.pow(num1, num2);
     }
 
     public static void repeatOps(String refOp,
@@ -62,6 +65,8 @@ public class StackExpression {
         // precedence of multiplication 
         if (op.equals("*"))
             return 2;
+        if (op.equals("^"))
+            return 3;
         return -1; // precedence of multiplication $(END)
     }
 
