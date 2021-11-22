@@ -16,6 +16,9 @@
 - Push each operator on the stack, but first pop and
 perform higher and equal precedence operations.
 
-2. Strategy 2: Use Stack
+2. Strategy 2: Use Tree 
+	- print with **inorder** 
+	- evaluate with **postorder** 
+	- also see tree slayt
 
 
