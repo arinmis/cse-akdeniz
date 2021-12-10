@@ -1,3 +1,4 @@
+
 /**
  * 
  *
@@ -8,11 +9,10 @@
 
 import java.util.*;
 
-public class TicTacToe {
+public class Program {
 
     public static void main(String[] args) {
-        Board board = new Board();
-        board.moveAI();
+        System.out.println(Arrays.toString("ü".getBytes()));
     }
 
 }
