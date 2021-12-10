@@ -84,22 +84,22 @@ public class Board {
 
     // find computers move
     public void moveAI() {
-        int[][] backupBoard = this.copy();  
+        System.out.println("move is calculating");
 
         // print2D(backupBoard);
-
         for(int i = 0; i < board.length; i++) {
             for(int j = 0; j < board[0].length; j++) {
+                // create back-up
+                int[][] backupBoard = this.copy();  
+                // put marks
                 putMark(i, j);
-                System.out.println("board: \n" + this.toString() + "\n");
+                System.out.println("board:" + "\n" + this.toString() + "\n");
                 // reset changes
                 this.board = backupBoard;
-                System.out.println("board: \n" + this.toString() + "\n");
                 // same player
                 player = - player;
             }
         }
-        System.out.println("move is calculating");
     }
 
 
