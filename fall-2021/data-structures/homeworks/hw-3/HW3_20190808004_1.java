@@ -7,22 +7,15 @@ public class HW3_20190808004_1 {
         // read tree nodes and x
         ArrayList<int[]> nums = readFile(args[0]);
         int[] treeValues = nums.get(0);
-        // value x
-        int pathSum = nums.get(1)[0];
-
-        // create binary search tree
-        /*
-         *      20
-         *  10      30
-
-        */
-
+        // create and construct binary search tree
         BTS  bts = new BTS();
-        for (int value : new int[] {10, 5, 1, 7, 40, 50}) {
+        for (int value : treeValues) {
             bts.add(value);
         }
+        // print whether tree is balanced or not
+        System.out.println(bts.isBalanced());
         bts.printTree();
-        System.out.println();
+
     }
 
     /* read string from file */
@@ -62,13 +55,14 @@ class BTS {
 
         int value;
         Node left, right;
+        Node parent;
 
         public Node(int value) {
             this.value = value;
             left = null;
             right = null;
+            parent = null;
         }
-
 
         @Override
         public String toString() {
@@ -91,24 +85,69 @@ class BTS {
         // call recursive add method
         insert(this.root, newNode);
     }
+
     /* add new value to binary search tree */
     public void insert(Node node, Node newNode) {
         if (newNode.value > node.value) {
             // place new node to right
             if (node.right == null) {
                 node.right = newNode;
+                newNode.parent = node;
                 return;
             }
             insert(node.right, newNode);
         }
         else if (newNode.value < node.value) {
-            // place new node to left 
+            // place new node to left
             if (node.left == null) {
                 node.left = newNode;
+                newNode.parent = node;
                 return;
             }
             insert(node.left, newNode);
         }
+    }
+
+    /* find the depth of the node */
+    public int depth(Node node) {
+        if (node.equals(this.root))
+            return 0;
+        return 1 + depth(node.parent);
+    }
+
+    /* find the height of the given tree */
+    public int height(Node node) {
+        int h = 1;
+        if (node == null)
+            return 0;
+        if (node.left != null)
+            h = Math.max(h, 1 + height(node.left));
+        if (node.right != null)
+            h = Math.max(h, 1 + height(node.right));
+        return h;
+    }
+
+    /* determine whether tree is balanced or not */
+    public boolean isBalanced() {
+        // store result in array
+        // to use same boolean data, in other scope
+        boolean[] result = {true};
+        balanceCheck(this.root, result);
+        return result[0];
+    }
+
+
+    /* determine whether tree is balanced or not */
+    public void balanceCheck(Node node, boolean[] result) {
+        int heightLeft = height(node.left);
+        int heightRight = height(node.right);
+        if (Math.abs(heightLeft - heightRight) > 1) {
+            result[0] = false;
+        }
+        if (node.left != null)
+            balanceCheck(node.left, result);
+        if (node.right != null)
+            balanceCheck(node.right, result);
     }
 
     /* print tree with inorder treversal */
