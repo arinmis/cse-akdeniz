@@ -3,11 +3,10 @@
 - characters
 - actors
 - images
-- acconts
+- accounts
 - password
 - directors
 - trailer
-
 
 #### Account
 - username
