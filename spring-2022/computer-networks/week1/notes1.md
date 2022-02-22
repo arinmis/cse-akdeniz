@@ -1,7 +1,6 @@
 ### Network 
 - Allow communication between users
 
-
 ### Nodes, Links
 
 ### History
