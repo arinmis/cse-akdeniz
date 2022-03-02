@@ -1,6 +1,26 @@
 ### Main Idea
 
--   In short fetching data from the CPU cash is much faster than fetching data from the main memory. Imagine that we have two n-by-n matrices and we want to multiply them. Whether you loop through the first row then column or vice versa it is an obviously O(n^2) algorithm but in real-world CPU cashes the all sequence of a memory location, multiplying the first row then column will be much faster. Matrix is a two-dimensional array and each row is represented by one-dimensional array. When CPU executes multiplication first row then column, it cashes row and uses chashed rows data.
+-   In short fetching data from the CPU cash is much faster than fetching data from the main memory. Imagine that we have two n-by-n matrices and we want to multiply them. Whether you loop through the first row then column
+
+```
+for (i=0;i<row;i++){
+    for (j=0;j<col;j++){
+       a[i][j]=b[i][j]+c[i][j];
+    }
+}
+```
+
+or vice versa
+
+```
+for (j=0;j<col;j++){
+    for (i=0;i<row;i++){
+        a[i][j]=b[i][j]+c[i][j];
+    }
+}
+```
+
+it is an obviously O(n^2) algorithm but in real-world CPU cashes the all sequence of a memory location, multiplying the first row then column will be much faster. Matrix is a two-dimensional array and each row is represented by one-dimensional array. When CPU executes multiplication first row then column, it cashes row and uses chashed rows data.
 
 -   To measure performance effect on C, compare two approaches by multiplying 10.000-by-10.000 two matrices.
 
