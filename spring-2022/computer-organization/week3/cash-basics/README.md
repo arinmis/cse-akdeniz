@@ -14,9 +14,27 @@ gcc -o slow NoneCashedMatrixMultiplication.c
 2. Run the binaries:
 
 ```
-./fast 10000
+./fast 20000
 ```
 
 ```
-./slow 10000
+./slow 20000
+```
+
+##### Result
+
+-   My laptop that has Intel Core i5-10210U CPU 1.60GHz with 8GB ram executed two program with those results:
+
+*   _./fast 20000_
+
+```
+Init time: 6.976491
+Exec time: 1.609989
+```
+
+-   _./slow 20000_
+
+```
+Init time: 6.963431
+Exec time: 36.298052
 ```
