@@ -20,7 +20,7 @@ for (j=0;j<col;j++){
 }
 ```
 
-it is an obviously O(n^2) algorithm but in real-world CPU cashes the all sequence of a memory location, multiplying the first row then column will be much faster. Matrix is a two-dimensional array and each row is represented by a one-dimensional array. When CPU executes multiplication first row then column, it cashes row and uses chashed rows data.
+both of them are obviously O(n^2) algorithms but in real-world CPU cashes some sequence of memory locations, multiplying the first row then column will be much faster. Matrix is a two-dimensional array and each row is represented by a one-dimensional array. When CPU executes multiplication first row then column, it cashes row and uses chashed rows data.
 
 -   To measure the performance effect on C, compare two approaches by multiplying 20.000-by-20.000 two matrices.
 
