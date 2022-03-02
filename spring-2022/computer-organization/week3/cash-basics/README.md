@@ -23,7 +23,7 @@ gcc -o slow NoneCashedMatrixMultiplication.c
 
 ##### Result
 
--   My laptop that has Intel Core i5-10210U CPU 1.60GHz with 8GB ram executed two program with those results:
+-   I have obtained those numbers with laptop that has Intel Core i5-10210U CPU 1.60GHz with 8GB RAM:
 
 *   _./fast 20000_
 
