@@ -1,0 +1,36 @@
+Software Requirement:
+
+- Administrator Side:
+    1. Grant access to login administrator site.
+         * Admin can log in to the system with email and password
+         * If the admin forgot his/her password, the system allows the admin to save his/her account.
+         * If authentication fails, the system shows error messages.
+    2. Admin can see all cars
+        * Filter cars brands
+        * Filter car rate/star
+    3. Admin can access all user and their pieces of information
+    4. Admin can observe general statistic about whole fleet(electricity cost, revenue etc.)
+    5. Show cars status(busy or not) 
+        * Show cars route if the car in use
+        * Admin can see who rented car if the car in use
+    6. Admin can see a map of:
+        * cars location 
+        * battery station for cars 
+    7. Admin can see the cars battery level 
+    8. Admin can see real-time video of autonomous car 
+
+- User Side:
+    1. Grant access to login user site.
+        * User can log in to the system with email and password
+        * If the user forgot his/her password, the system allows user to save his/her account. 
+        * If authentication fails, the system shows error messages.
+    2. Users can signup into the system 
+    3. User can rent a car
+    4. User can enter payment information
+    5. User can change his/hers settings(like password, image, etc.)
+    6. User can enter start and final destination  
+        * Users can select among alternative routes and cost 
+        * Users can select among alternative cars 
+    7. Users can observe the complete route, from start to endpoint of the car
+    8. Users can revise(with stars)/her experience. 
+

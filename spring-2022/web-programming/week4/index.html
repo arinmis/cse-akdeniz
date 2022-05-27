@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars"></select>
+
+    <script>
+      // cars value
+      const cars = ["BMW", "Toyoto", "opel", "audi", "arinmis"];
+
+      let txt = "";
+      cars.forEach((value) => {
+        console.log(value);
+        txt += `<option value="${value.toLowerCase()}">${value.toUpperCase()}</option>`;
+      });
+      document.getElementById("cars").innerHTML = txt;
+    </script>
+  </body>
+</html>
