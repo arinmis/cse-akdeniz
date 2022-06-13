@@ -1,10 +1,10 @@
 # Taken Courses
-1. Database Management Systems
-2. Computer Organization
-3. Digital Design
-4. Computer Networks
-5. Linear Algebra
-6. Web Programming 
+1. Database Management Systems: PASSED
+2. Computer Organization: PASSED
+3. Physics 2: FAILED 
+4. Computer Networks: PASSED
+5. Linear Algebra: FAILED 
+6. Web Programming: PASSED 
 
 Total Hour Per Week: 23 
 
