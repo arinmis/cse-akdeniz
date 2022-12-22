@@ -8,11 +8,11 @@ public class WebBrowser extends Client {
         super(notificationWay);
     }
 
-    public void runBrowser() {
+    public void run() {
         this.notificationWay = new FullNotification();
     }
 
-    public void killBrowser() {
+    public void kill() {
         this.notificationWay = new BlockNotification();
     }
 }

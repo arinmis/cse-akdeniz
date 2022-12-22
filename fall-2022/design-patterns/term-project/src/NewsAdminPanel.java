@@ -1,4 +1,4 @@
-public class NewsAdmin {
+public class NewsAdminPanel {
     public static void main(String[] args) {
         /* create news notification server */
         NewsNotificationServer newsNotificationServer = new NewsNotificationServer();
@@ -25,17 +25,17 @@ public class NewsAdmin {
         newsNotificationServer.notifyObservers();
 
 
-        System.out.println("\n\n\n");
+        // System.out.println("\n\n\n");
 
 
-        /* publish second notification */
-        NewsNotification secondNewsNotification = 
-         new NewsNotification("Web Browser Started to Running", "Web browser is running now, so it changed way to notification.");
+        // /* publish second notification */
+        // NewsNotification secondNewsNotification = 
+        //  new NewsNotification("Web Browser Started to Running", "Web browser is running now, so it changed way to notification.");
 
-        webBrowser.runBrowser(); // run web browser to receive notification
+        // webBrowser.run(); // run web browser to receive notification
 
 
-        newsNotificationServer.setNotification(secondNewsNotification);
-        newsNotificationServer.notifyObservers();
+        // newsNotificationServer.setNotification(secondNewsNotification);
+        // newsNotificationServer.notifyObservers();
     }
 }
