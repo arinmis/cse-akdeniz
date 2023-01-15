@@ -76,7 +76,7 @@ Addresses an area of memory called stack
 
 ## RFLAGS
 - Indicate the condition of microprocessor and control its operation.
-- Flags never change for any data transfer or program control operation.
+- Flags never change for any data transfer or program control operation.  
 |Flag| Purpose|
 |----|--------|
 |C(carry)|Holds the carry after addition or borrow after substraction|
