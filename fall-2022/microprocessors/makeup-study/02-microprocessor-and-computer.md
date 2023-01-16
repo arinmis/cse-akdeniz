@@ -18,7 +18,7 @@ Request a memory location from the memory or an I/O location from the I/O device
 Data transfers vary in size, 8086 transfer 16 bits of data.
 
 
-Control bus lines select and cause memory or I/O to perform a read or write operation.
+Control bus lines select and cause memory or I/O to perform a read or write operation.  
     * MRDC -> memory read control
     * MWTC -> memory write control
     * IORC -> I/O read control
