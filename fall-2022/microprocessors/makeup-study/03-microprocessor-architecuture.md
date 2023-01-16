@@ -11,6 +11,7 @@ Assembly instructions contains same instructions as machine language, but with m
 # Inside Intel 8086
 The 8086 is a 16-bit microp- Indicate the condition of microprocessor and control its operation.
 - Flags never change for any data transfer or program control operation.
+
 |Flag| Purpose|
 |----|--------|
 |C(carry)|Holds the carry after addition or borrow after substraction|
