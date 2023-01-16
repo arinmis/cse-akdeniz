@@ -19,10 +19,10 @@ Data transfers vary in size, 8086 transfer 16 bits of data.
 
 
 Control bus lines select and cause memory or I/O to perform a read or write operation.  
-    * MRDC -> memory read control
-    * MWTC -> memory write control
-    * IORC -> I/O read control
-    * IOWC -> I/O write control
+    - MRDC -> memory read control
+    - MWTC -> memory write control
+    - IORC -> I/O read control
+    - IOWC -> I/O write control
 
 # Number Systems
 - Binary, decimal and hexadecimal must known before dive in the code.
