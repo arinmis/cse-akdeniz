@@ -19,7 +19,7 @@
     * More efficient than rewiring a machine.
 - **von Neumann** developed system that accept instructions and store them in memory.
 - **Assembly language** is invented to simplify entering binary code.  
-    * Code with **mnemonic**. Instead of ```ADD``, use ```0100 0111```.
+    * Code with **mnemonic**. Instead of ```ADD```, use ```0100 0111```.
 - Other high-level languages rised: BASIC, PASCAL, C/C++, C#, Java, and ADA.
 
 
@@ -66,7 +66,7 @@ Main memory divided into 3 parts:
 - XMS(extended memory system)
 
 ## TPA
-The transient program area (TPA) holds the DOS(disk operating system.
+The transient program area (TPA) holds the DOS(disk operating system).
 - TPA is a DOS concept.
 
 ## The System Area
