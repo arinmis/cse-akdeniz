@@ -1,0 +1,101 @@
+1. Command: 
+-------------------------------
+pwd
+-------------------------------
+
+Command prints absolute path.
+
+2. If the path starts with tilde(~) it is a relative path, if starts with slash(/) it is an absolute path. 
+
+3. Command: 
+-------------------------------
+cd ~
+-------------------------------
+
+4. 
+Command:
+-------------------------------
+cd ~; 
+cd Documents
+-------------------------------
+
+5. Command:
+-------------------------------
+mkdir ~/Documents/AssignmentSolutions 
+-------------------------------
+
+6. Command:
+-------------------------------
+cp AssignmentSolutions/* Assignments
+-------------------------------
+
+7. Command:
+-------------------------------
+head -n 20 ~/Documents/AssignmentSolutions/Assignment1.txt
+-------------------------------
+
+
+
+8. Command:
+-------------------------------
+mv ~/Documents/AssignmentSolutions/Assignment1.txt \ 
+~/Documents/AssignmentSolutions/Assignment1_Solutions.txt
+-------------------------------
+
+9. Command:
+-------------------------------
+passwd
+-------------------------------
+My attempt wasn't successful since 'Student' only has 7 character, its too short. 
+
+
+10. Command:
+-------------------------------
+cd ~; \
+mkdir Documents/Courses;
+-------------------------------
+
+11. Command:
+-------------------------------
+mkdir ~/Documents/Courses/CSE{301,303,313,321,357};
+-------------------------------
+
+12. Command:
+-------------------------------
+mv ~/Documents/Assignment* ~/Documents/Courses/CSE313;
+-------------------------------
+
+13. Command:
+-------------------------------
+mkdir ~/Documents/Courses/CSE313/Exams;
+-------------------------------
+
+14. Command: 
+-------------------------------
+tail -n 10 ~/Documents/Courses/CSE313/Assignments/Assigment1.txt > ~/Documents/Courses/CSE313/Exams/MidtermExam.txt;
+-------------------------------
+
+15. Command: 
+-------------------------------
+cat ~/Documents/Courses/CSE313/Assignments/Assigment2.txt >> ~/Documents/Courses/CSE313/Exams/MidtermExam.txt;
+-------------------------------
+
+16. Command: 
+-------------------------------
+cat ~/Documents/Courses/CSE313/Exams/MidtermExam.txt; \
+cp ~/Documents/Courses/CSE313/Exams/MidtermExam.txt > ~/Documents/Courses/CSE313/Exams/MidtermExam_Solutions.txt
+-------------------------------
+
+17. Command: 
+-------------------------------
+rm -r  ~/Documents/Courses/OnlineOgretim
+-------------------------------
+
+18. Command: 
+-------------------------------
+rm -r  ~/Documents/Viruses/COVID19
+-------------------------------
+
+19. spell.txt has has an additional hard link since link count is 2. 
+
+20. There is no softlink since any of the long list file starts with letter 'l'.
