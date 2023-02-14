@@ -1,11 +1,14 @@
-public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
+package factories;
+import ingredients.*;
+
+public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
 
     public Dough createDough() {
         return new ThinCrustDough();
     }
 
     public Sauce createSauce() {
-        return new MarinaraSauce();
+        return new MarianaSauce();
     }
     
     public Cheese createCheese() {
@@ -17,13 +20,9 @@ public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
         return veggies;
     }
 
-    
-    public Pepperoni createPepperoni() {
-        return new SlicedPepperoni();
-    }
 
     
-    public Clams createClam() {
+    public Clams createClams() {
         return new FreshClams();
     }
 
