@@ -13,7 +13,11 @@ public class ChocolateBoiler {
 
     public static ChocolateBoiler getUniqueInstance() { 
         if (uniqueInstance == null) {
-            uniqueInstance = new ChocolateBoiler();
+            synchronized (ChocolateBoiler.class) {
+                if (uniqueInstance == null) {
+                    uniqueInstance = new ChocolateBoiler();
+                }
+            }
         }    
         return uniqueInstance;
     }
