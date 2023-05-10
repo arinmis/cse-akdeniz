@@ -7,7 +7,7 @@ Results of data exchange performance among python and node service.
 
 # To Run
 
-1. make sure Python and Node serices are up and running locally.
+1. make sure Python and Node services are up and running locally.
 2. active environment and install dependencies.
 ```
 python -m venv env
