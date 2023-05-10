@@ -1,4 +1,9 @@
 # Benchmark: REST vs. gRPC
+Results of data exchange performance among python and node service.
+
+<div align="center">
+    <img src="https://github.com/arinmis/cse-akdeniz/assets/56651041/26dea8ee-28b7-4f64-98b5-93315e76d13b" />
+</div>
 
 # To Run
 
