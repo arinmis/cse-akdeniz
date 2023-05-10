@@ -31,6 +31,8 @@ print(grpc_data)
 # plot lines
 plt.plot(rest_data["x"], rest_data["y"], label = "REST API")
 plt.plot(grpc_data["x"], grpc_data["y"], label = "gRPC API")
+plt.xlabel("amount of data fetched")
+plt.ylabel("time(s)")
 plt.legend()
 plt.show()
 
