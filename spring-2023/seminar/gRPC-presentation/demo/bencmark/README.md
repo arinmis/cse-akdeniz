@@ -1,4 +1,14 @@
 # Benchmark: REST vs. gRPC
+Instance of data chunck excahnged among services:
+
+```
+{ 
+    "time": 1683485985492,
+    "value": 38.39912033969115,
+    "available": true 
+}
+```
+
 Results of data exchange performance among python and node service.
 
 <div align="center">
