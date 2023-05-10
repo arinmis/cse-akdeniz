@@ -1,5 +1,5 @@
 # Benchmark: REST vs. gRPC
-Instance of data chunck excahnged among services:
+Instance of data chunck exchanged among services:
 
 ```
 { 
