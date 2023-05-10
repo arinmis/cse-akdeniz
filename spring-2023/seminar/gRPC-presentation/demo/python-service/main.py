@@ -1,16 +1,21 @@
 from flask import Flask, jsonify
+from google.protobuf.json_format import MessageToDict
+
 import requests
+import data_pb2
+import data_pb2_grpc
+import grpc
 
-app = Flask(__name__)
+print(grpc.__file__)
 
-@app.route('/json/<n>')
+port =  5000
+
+restServer = Flask(__name__)
+
+@restServer.route('/rest/<n>')
 def json(n):
-    values = fetchData(int(n))
-    return jsonify(values) 
-
-
-def fetchData(n):
-    url = "http://localhost:3000/json"
+    n = int(n)
+    url = "http://localhost:3000/rest"
 
     i = 1;
     while (i < n): 
@@ -23,8 +28,34 @@ def fetchData(n):
     values = response.json()
 
     # Print the response
-    print("values updated", values)
+    # print("values updated", values)
 
-    return values
+    return jsonify(values) 
 
-app.run(host='0.0.0.0', port=5000)
+
+
+'''
+fetch values from gRPC server   
+'''
+@restServer.route('/grpc/<n>')
+def grpcEndpoint(n):
+    channel = grpc.insecure_channel('localhost:3001')
+    stub = data_pb2_grpc.DataServiceStub(channel)
+
+    request = data_pb2.DataRequest()
+
+    i = 1;
+    while i < int(n): 
+        request.n = i # set amount
+        stub.QueryData(request)
+        i += 1
+
+    request.n = i
+
+    response = stub.QueryData(request)
+    response_dict = MessageToDict(response)
+    return jsonify(response_dict)
+
+
+if __name__ == '__main__':
+    restServer.run(host='0.0.0.0', port=port)

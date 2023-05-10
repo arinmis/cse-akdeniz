@@ -2,28 +2,69 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const  protobuf = require("protobufjs");
 
-const app = express()
-const port = 3000
+const portRest = 3000
+const portGrpc = portRest + 1
+
+/* gRPC server configs */
+const path = require('path');
+const grpc = require('@grpc/grpc-js');
+const protoLoader = require('@grpc/proto-loader');
+const packageDefinition = protoLoader.
+  loadSync(path.join(__dirname, '../protos/data.proto'), {
+  keepCase: true,
+  longs: String,
+  enums: String,
+  defaults: true,
+  oneofs: true
+});
+
+const dataProto = grpc.loadPackageDefinition(packageDefinition);
+
+const grpcServer = new grpc.Server();
+
+/* REST service configs */
+const restServer = express()
 
 // middlewares
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+restServer.use(bodyParser.json())
+restServer.use(bodyParser.urlencoded({ extended: false }))
 
+
+function genDataArray(n) { 
+  const array = []
+  for (let i = 0; i < n; i++) { 
+    array.push(generateData());
+  }
+  return array;
+}
 
 /* response n amount of value */ 
-app.get('/json/:n', (req, res) => {
-  data = {"values": []}
+restServer.get('/rest/:n', (req, res) => {
   const n = req.params.n;
-  for (let i = 0; i < n; i++) { 
-    data.values.push(generateData());
-  }
-  console.log('Data Received: ' + JSON.stringify(data));
+  data = {"values": genDataArray(n)}
+  console.log(`REST endpoint has been called with param ${n}`)
   res.json(data)
 })
 
-app.listen(port, () => {
-  console.log(`Node service is listening on port ${port}`)
+restServer.listen(portRest, () => {
+  console.log(`Node REST service is listening on port ${portRest}`)
 })
+
+
+/* gRPC endpoints */
+grpcServer.addService(dataProto.DataService.service, { QueryData: 
+  (call, callback) => { 
+    const n = Number(call.request.n)
+    console.log(`gRPC endpoint has been called with param ${n}`)
+    const data = {"value": genDataArray(n)}
+    callback(null, data)
+  } 
+});
+
+grpcServer.bindAsync(`0.0.0.0:${portGrpc}`, grpc.ServerCredentials.createInsecure(), () => {
+    grpcServer.start();
+    console.log(`Node gRPC service is listening on port ${portGrpc}`)
+});
 
 /* generate random data object */ 
 function generateData() { 

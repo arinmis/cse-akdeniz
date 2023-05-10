@@ -1,0 +1,22 @@
+// package datapackage;
+syntax = "proto3";
+
+
+service DataService { 
+    rpc QueryData(DataRequest) returns (DataResponse);
+}
+
+
+message DataRequest { 
+    int64 n = 1;
+}
+
+message DataResponse { 
+    repeated DataEntry value = 1; 
+}
+
+message DataEntry { 
+    int64 time = 1;
+    double value = 2;
+    bool available = 3; 
+}
