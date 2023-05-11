@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"bitwise","l":"BitwiseDouble"},{"p":"bitwise","l":"BitwiseInteger"},{"p":"bitwise","l":"BitwiseString"},{"p":"bitwise","l":"HW2_20190808004"}];updateSearchResults();
