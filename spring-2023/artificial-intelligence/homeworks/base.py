@@ -13,18 +13,17 @@ neighbours_list = [
     ["Argentina", ["Bolivia", "Brazil", "Chile", "Paraguay", "Uruguay"]],
     ["Bolivia", ["Argentina", "Brazil", "Chile", "Paraguay", "Peru"]],
     ["Brazil", ["Argentina", "Bolivia", "Colombia", "Guyana", "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela"]],
-    ["Chile", ["Argentina", "Bolivia"]],
-    ["Colombia", ["Bolivia", "Brazil", "Ecuador", "Peru"]],
-    ["Ecuador", ["Brazil", "Colombia", "Peru"]],
-    ["Falkland Islands", []],
+    ["Chile", ["Argentina", "Bolivia", "Peru"]],
+    ["Colombia", ["Brazil", "Ecuador", "Peru", "Venezuela"]],
+    ["Ecuador", ["Colombia", "Peru"]],
+    ["Falkland Islands",  []],
     ["Guyana", ["Brazil", "Suriname", "Venezuela"]],
     ["Paraguay", ["Argentina", "Bolivia", "Brazil"]],
-    ["Peru", ["Argentina", "Bolivia", "Brazil", "Colombia", "Ecuador"]],
-    ["Suriname", ["Guyana", "Brazil"]],
+    ["Peru", ["Bolivia", "Brazil", "Chile", "Colombia", "Ecuador"]],
+    ["Suriname", ["Brazil", "Guyana"]],
     ["Uruguay", ["Argentina", "Brazil"]],
-    ["Venezuela", ["Brazil", "Guyana"]]
+    ["Venezuela", ["Brazil", "Colombia", "Guyana"]]
 ]
-
 
 # validate color choice 
 def is_valid_color(country, color_map, neighbours):
@@ -76,5 +75,5 @@ if __name__ == "__main__":
     """
     selected_map = all_maps[randint(0, len(all_maps))]
     print(len(all_maps), "possible solution found")
-    print("selected color map: \n{}", selected_map) 
+    print("selected color map:\n", selected_map) 
     plot_choropleth(colormap=selected_map)
