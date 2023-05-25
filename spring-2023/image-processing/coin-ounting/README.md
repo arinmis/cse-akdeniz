@@ -15,6 +15,10 @@ These steps includes couple of other tecqniues to recognize the values of the co
     * size estimation,
     * pattern matching with known coin templates that provided in our dataset.
 
+# Run test
+```
+python count_coin.py tests/coins.jpg
+```
 
 # Resource
 [Youtube](https://www.youtube.com/watch?v=rRcwuQGDFOA)

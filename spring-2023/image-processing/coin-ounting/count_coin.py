@@ -1,15 +1,21 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+import sys
 
-image = cv2.imread('coins.jpg')
+
+if len(sys.argv) < 2:
+    print("usage: python count_coins.py target.jpg")
+    exit()
+
+image = cv2.imread(sys.argv[1])
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 plt.imshow(gray, cmap='gray');
 
 # 1. make it blur
 blur = cv2.GaussianBlur(gray, (11,11), 0)
 plt.imshow(blur, cmap='gray')
-plt.show()
+# plt.show()
 
 # 2. apply edge detection
 canny = cv2.Canny(blur, 30, 150, 3)
@@ -18,7 +24,7 @@ canny = cv2.Canny(blur, 30, 150, 3)
 # make edges clear
 dilated = cv2.dilate(canny, (1,1), iterations = 2)
 plt.imshow(dilated, cmap='gray')
-plt.show()
+# plt.show()
 
 # 3. Contour the coins
 (cnt, heirarchy) = cv2.findContours(dilated.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
