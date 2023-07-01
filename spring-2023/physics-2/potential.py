@@ -75,6 +75,7 @@ p = Point(X, 0) # represent point p
 
 rod_potential = get_rod_potential(Q, L, X)
 print(f"rod potential: {rod_potential}")
+print("\n----")
 
 for n in range(0, 10, 2):
     charges = distribute_charges(Q, 0, L, n)
@@ -82,7 +83,7 @@ for n in range(0, 10, 2):
     v_point = total_potential(charges, p)
     print(f"distributed into {n} pieces: {v_point} V")
 
-#
+print("\n----")
 # very large value n
 for i in range(2, 8):
     n = 10 ** i 
@@ -91,7 +92,3 @@ for i in range(2, 8):
     v_point = total_potential(charges, p)
     diff = abs(rod_potential - v_point)
     print(f"distributed into {n} pieces: {v_point} V, diff with rod: {diff}")
-
-"""
-When VN grows, electric potential converges to V0 wihch potential of the rod.
-"""
