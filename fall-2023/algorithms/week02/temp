@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/arinmis/projects/cse-akdeniz/fall-2022/algorithms/week02/merge.py", line 37, in <module>
+    arr_sorted = merge_sort(arr)
+  File "/home/arinmis/projects/cse-akdeniz/fall-2022/algorithms/week02/merge.py", line 30, in merge_sort
+    left_array = merge_sort(array[:piece_size])
+  File "/home/arinmis/projects/cse-akdeniz/fall-2022/algorithms/week02/merge.py", line 34, in merge_sort
+    return merge(left_array, mid_array, right_array)
+  File "/home/arinmis/projects/cse-akdeniz/fall-2022/algorithms/week02/merge.py", line 14, in merge
+    if i < len(arr1) and arr1[i] <= arr2[j] and arr1[i] <= arr3[k]:
+IndexError: list index out of range
