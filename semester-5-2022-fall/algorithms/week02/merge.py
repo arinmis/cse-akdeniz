@@ -1,3 +1,7 @@
+"""
+Author: Mustafa Arinmis, 20190808004
+Date: 2023-10-17
+"""
 from math import ceil
 
 def merge(arr1, arr2):
@@ -22,16 +26,17 @@ def merge(arr1, arr2):
     return sorted_arr
 
 def merge_sort(array):
-    if len(array) <= 1:
+    if len(array) <= 2:
         return array
     
-    border = ceil(len(array) / 2)
-    left_array = merge_sort(array[:border])
-    right_array = merge_sort(array[border:])
+    piece_size = ceil(len(array) / 3)
+    left_array = merge_sort(array[:piece_size])
+    mid_array = merge_sort(array[piece_size:2 * piece_size])
+    right_array = merge_sort(array[2 * piece_size:])
 
-    return merge(left_array, right_array)
+    return merge(merge(left_array, mid_array), right_array)
 
-arr = [1, 3, -1, 2, 10]
+arr = [1, 3, -1, 2, 10, 6, 5, 4, 7]
 arr_sorted = merge_sort(arr)
 print("array unsorted: ", arr)
 print("array sorted: ", arr_sorted)
