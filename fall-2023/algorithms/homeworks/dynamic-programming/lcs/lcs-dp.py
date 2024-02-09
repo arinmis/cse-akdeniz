@@ -25,11 +25,11 @@ def gen_lcs_table(str1, str2):
                 table[row][col] = max(table[row - 1][col], table[row][col - 1])
     return table
 
-X = "AGGTAB"
-Y = "GXTXAYB"
+X = "ABCBDAB"
+Y = "BDCBA"
 
 lcs_table = gen_lcs_table(X, Y)
 print(f"lcs lenght is {lcs_table[-1][-1]}")
 print_lcs(X, lcs_table, len(lcs_table) - 1, len(lcs_table[0]) - 1)
 print()
-# print_table(lcs_table)
+print_table(lcs_table)
