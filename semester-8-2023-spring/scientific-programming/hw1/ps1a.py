@@ -30,7 +30,7 @@ def load_cows(filename):
         content = file.read()
         return {
             line.split(",")[0]: int(line.split(",")[1]) 
-            for line in file.read().split("\n")
+            for line in content.split("\n")
         }
 
 # Problem 2
@@ -58,20 +58,22 @@ def greedy_cow_transport(cows,limit=10):
     """
     if limit < 10:
         raise Exception(f"Limit must be greater and equal to 10, current limit {limit}")
-    # TODO: Your code here
-    sorted_cows = {k: cows[k] for k in sorted(cows)}
+
+    sorted_cows = {k: cows[k] for k in sorted(cows, key=cows.get, reverse=True)}
     trips = []
-    capacity = limit
-    heaviest_cow = next(iter(sorted_cows))
-    while not len(sorted_cows) == 0:
-        shipped_cows = []
-        while not heaviest_cow == None and capacity >= sorted_cows[heaviest_cow]:  
-            shipped_cows.append(heaviest_cow)
-            capacity -= sorted_cows[heaviest_cow]
-            del sorted_cows[heaviest_cow] 
-            heaviest_cow = next(iter(sorted_cows), None)
-        trips.append(shipped_cows)
+    while len(sorted_cows) > 0:
         capacity = limit
+        shipped_cows = []
+        
+        for cow_name, weight in sorted_cows.items():
+            if capacity == 0: 
+                break
+            if capacity < weight: 
+                continue
+            shipped_cows.append(cow_name)
+            capacity -= weight
+        trips.append(shipped_cows)
+        sorted_cows = del_keys(shipped_cows, sorted_cows)
     return trips
 
 
@@ -97,10 +99,7 @@ def brute_force_cow_transport(cows,limit=10):
     transported on a particular trip and the overall list containing all the
     trips
     """
-    # TODO: Your code here
-
     trips = [t for t in get_partitions(cows.keys()) if is_valid_trip(cows, t, limit)]
-    # pprint(trips)
     return min(trips, key=len)  
 
 # Problem 4
@@ -117,16 +116,17 @@ def compare_cow_transport_algorithms():
     Returns:
     Does not return anything.
     """
-    # TODO: Your code here
-    # cows = load_cows("ps1_cow_data.txt")
-    test_cows = {'Jesse':6, 'Maybel': 3, 'Callie': 2, "Maggie": 5}
-    greedy_trip, time_g = calc_time_elapsed(greedy_cow_transport, [test_cows])
+    cows = load_cows("ps1_cow_data.txt")
+    # test_cows = {'Jesse':6, 'Maybel': 3, 'Callie': 2, "Maggie": 5}
+    greedy_trip, time_g = calc_time_elapsed(greedy_cow_transport, [cows])
     seperator = f"\n{'-' * 20}\n"
     print(seperator)
-    print(f"greedy trip: {greedy_trip}\nelapsed time: {time_g}")
-    brute_force_trip, time_bf = calc_time_elapsed(brute_force_cow_transport, [test_cows])
+    pprint(greedy_trip)
+    print(f"greedy trip: \nelapsed time: {time_g}")
+    brute_force_trip, time_bf = calc_time_elapsed(brute_force_cow_transport, [cows])
     print(seperator)
-    print(f"brute force trip: {brute_force_trip}\nelapsed time: {time_bf}")
+    pprint(brute_force_trip)
+    print(f"brute force trip: \nelapsed time: {time_bf}")
     print(seperator)
 
 
@@ -139,6 +139,11 @@ def is_valid_trip(cows, trip, limit):
         if  sum([cows[cow] for cow in ship]) > limit:
                 return False
     return True
+
+def del_keys(keys, dictionary):
+    for key in keys:
+        del dictionary[key]
+    return dictionary
 
 """
 returns elapsed time and output of function 
