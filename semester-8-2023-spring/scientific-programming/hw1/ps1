@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-
-while true; do
-    python ps1a.py
-    sleep 0.5
-done
