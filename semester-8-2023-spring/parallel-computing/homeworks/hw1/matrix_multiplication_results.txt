@@ -1,0 +1,9 @@
+Matrix Size, Method, Execution Time
+512,Traditional,.207291087
+512,Optimized,.125949656
+1024,Traditional,2.152717616
+1024,Optimized,.872223870
+2048,Traditional,32.986182485
+2048,Optimized,7.376661927
+4096,Traditional,326.333343885
+4096,Optimized,50.575439482
