@@ -414,3 +414,6 @@ tags
 *.class
 
 *swp
+
+# ignore binary files
+*.bin
