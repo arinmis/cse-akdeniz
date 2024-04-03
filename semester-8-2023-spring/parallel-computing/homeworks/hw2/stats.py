@@ -53,6 +53,6 @@ plt.xlabel('Number of Threads')
 plt.ylabel('Error Margin (absolute error)')
 plt.grid(True)
 plt.xticks(thread_counts)
-
 plt.tight_layout()
-plt.show()
+plt.savefig('stats.png', dpi=300)  # Save as PNG with 300 DPI
+# plt.show()
