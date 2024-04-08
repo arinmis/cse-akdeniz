@@ -10,3 +10,14 @@ Duck simulator is a sample application. There are different kinds of duck that s
 <div align="center">
 	<img src="https://user-images.githubusercontent.com/56651041/207471042-74aaf6e7-f23e-4a3b-9845-c5bb118a4213.png" />
 </div>
+
+## Design Principles
+
+1. Encapsulate what varies  
+Identify the aspects of your application that vary and seprate them from what stays the same.
+
+2. Program to an interface, not an implementation.
+It means program to a supertype.
+
+3. Favor composition over inheritance 
+Has-A can be beter than IS-A
