@@ -9,3 +9,8 @@ Weateer-O-Rama is a weater monitoring system that implements observer pattern to
 <div align="center"> 
     <img src="https://user-images.githubusercontent.com/56651041/208571731-2db74b2d-f63b-490a-97f2-9d518050f2e8.png">    
 </div>
+
+## Design principles
+
+1. Strive for loosely coupled designs between objects that interact.
+
