@@ -7,3 +7,10 @@ StarBuzz Coffe has base coffees and couple of condiment that can be added to bas
 <div align="center">
 <img src="https://user-images.githubusercontent.com/56651041/211087836-11a2adb9-2db0-4f9a-9cf3-c0dca52af898.png" alt="strategy-uml">
 </div>
+
+
+## Design principles
+
+4. The Open-Closed Principle
+
+Classes should be open for extension, but closed for modification.
