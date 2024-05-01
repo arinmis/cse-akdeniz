@@ -5,7 +5,7 @@ Create virtiual environment, install dependencies and activate virtiual environm
 ```
 python -m venv venv
 source venv/bin/active
-pip install -r requirments.txt
+pip install -r requirements.txt
 ```
 
 
@@ -39,3 +39,33 @@ Simply run `python scrap_reddit.py`
 
 ## See stats
 `python analayze.py`
+
+Results for topic `python`
+```
+Most Upvoted Posts:
+('Real stats/facts that feel fake?', 2262)
+('Gunther didn’t want to join the main roster because of Vince McMahon.', 932)
+('Got a photo of Roman Reigns, and his victims framed.', 805)
+('WWE knows about the Def Rebel complaints.', 599)
+('Bro what the hell is wrong with people it hasn’t even been a month💀', 415)
+('Drew McIntyre should go over CM Punk', 381)
+('Former WWE Champion returns to Monday Night RAW', 229)
+('I hope the Final Testament is going to be drafted to Raw', 184)
+('The NXT call ups should be  what the draft is about.   \n', 162)
+('What a beautiful shot. Still surreal to know that CM Punk is back in WWE. My God. ', 140)
+
+Most Active Authors:
+('Snubie1', 4)
+('as14prez', 2)
+('zerogtoilet', 1)
+('squallLeonhart20', 1)
+('shreddedcheese11', 1)
+('searcher4421', 1)
+('renegade-811', 1)
+('murphy788', 1)
+('lipsdontdie', 1)
+('leftarmorthodox', 1)
+
+Sentiment Analysis of Comments:
+{'positive': 33, 'neutral': 12, 'negative': 5}
+```

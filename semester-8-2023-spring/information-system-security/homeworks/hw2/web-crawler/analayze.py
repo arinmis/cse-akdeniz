@@ -1,6 +1,8 @@
 import os
-from dotenv import load_dotenv
 import sqlite3
+from dotenv import load_dotenv
+from textblob import TextBlob
+
 
 def connect_db():
     load_dotenv()
@@ -25,7 +27,7 @@ def fetch_most_active_authors():
 def perform_sentiment_analysis():
     conn = connect_db()
     c = conn.cursor()
-    c.execute("SELECT comment FROM Comments")  # Assuming there's a Comments table
+    c.execute("SELECT selftext FROM RedditSubmissions")  # Assuming there's a Comments table
     comments = c.fetchall()
     sentiments = {'positive': 0, 'neutral': 0, 'negative': 0}
     for comment in comments:
