@@ -40,7 +40,7 @@ Simply run `python scrap_reddit.py`
 ## See stats
 `python analayze.py`
 
-Results for topic `python`
+Results for `wwe` subreddit
 ```
 Most Upvoted Posts:
 ('Real stats/facts that feel fake?', 2262)
