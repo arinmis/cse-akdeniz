@@ -1,0 +1,13 @@
+antiorm==1.2.1
+certifi==2024.2.2
+charset-normalizer==3.3.2
+db==0.1.1
+db-sqlite3==0.0.1
+idna==3.7
+praw==7.7.1
+prawcore==2.4.0
+python-dotenv==1.0.1
+requests==2.31.0
+update-checker==0.18.0
+urllib3==2.2.1
+websocket-client==1.8.0
