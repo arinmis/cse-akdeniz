@@ -1,4 +1,4 @@
-# Instanll Dependencies
+# Install Dependencies
 ```
 sudo apt install openmpi-bin
 sudo apt install libopenmpi-dev
@@ -6,10 +6,10 @@ sudo apt install libopenmpi-dev
 
 ## Compile
 ```
-mpicc main.c -o main
+mpicc <scatter>.c -o scatter
 ```
 
 ## Run
 ```
-mpirun --oversubscribe -np 40 ./main
+mpirun --oversubscribe -np 40 ./scatter 1000
 ```
