@@ -27,6 +27,8 @@ int main(int argc, char** argv) {
         // If we are rank 1, receive the number from process 0
         MPI_Recv(&number, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
         printf("Process 1 received number %d from process 0\n", number);
+    } else { 
+        printf("nothing to do\n");
     }
 
     // Finalize the MPI environment

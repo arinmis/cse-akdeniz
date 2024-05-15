@@ -47,7 +47,7 @@ python benchmark_script.py --size 50 --processes 1 2 5 10 25
 
 ### **Results**
 
-[benchmark-mpi](https://github.com/arinmis/cse-akdeniz/assets/56651041/09c8a38c-b397-4fef-9f66-59e87370b2c3)
+![benchmark-mpi](https://github.com/arinmis/cse-akdeniz/assets/56651041/09c8a38c-b397-4fef-9f66-59e87370b2c3)
 
 The following graph illustrates the MPI Matrix Multiplication Computation Time vs. Number of Processes for a 5000x5000 Matrix:
 
