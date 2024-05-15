@@ -1,0 +1,33 @@
+mpirun --oversubscribe -np 25 ./main 5000 matrixA.bin matrixB.bin
+Total computation time: 42.231750 seconds
+
+mpirun --oversubscribe -np 20 ./main 5000 matrixA.bin matrixB.bin
+Total computation time: 41.295066 seconds
+
+
+mpirun --oversubscribe -np 10 ./main 5000 matrixA.bin matrixB.bin
+Total computation time: 41.211808 seconds
+
+
+mpirun --oversubscribe -np 5 ./main 5000 matrixA.bin matrixB.bin
+Total computation time: 40.986512 seconds
+
+mpirun --oversubscribe -np 4 ./main 5000 matrixA.bin matrixB.bin
+Total computation time: 40.352569 seconds
+
+mpirun --oversubscribe -np 3 ./main 5000 matrixA.bin matrixB.bin
+Total computation time: 39.885705 seconds
+
+mpirun --oversubscribe -np 2 ./main 5000 matrixA.bin matrixB.bin
+Total computation time: 42.583875 seconds
+
+mpirun --oversubscribe -np 1 ./main 5000 matrixA.bin matrixB.bin
+Total computation time: 64.761197 seconds
+
+
+
+len([1, 2, 3, 4, 5,  10, 20, 25])
+len([64.761197, 42.583875,  39.885705, 40.352569, 40.986512,  41.211808,  41.295066,  42.231750])
+
+
+python benchmark_script.py --size 5000 --processes 1 2 3 4 5 10 20 25
